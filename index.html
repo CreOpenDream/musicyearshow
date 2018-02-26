@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>2018数据易秀网音乐年度报告</title>
+	</head>
+	<body>
+
+		<img src="#" id="img_qr" alt="这是二维码" />
+	</body>
+	<script type="text/javascript" src="js/jquery-2.1.0.js" ></script>
+	<script>
+//		
+		function GetUrlRelativePath()
+　　{
+　　　　var url = document.location.toString();
+　　　　var arrUrl = url.split("//");
+
+　　　　var start = arrUrl[1].indexOf("/");
+　　　　var relUrl = arrUrl[1].substring(start);//stop省略，截取从start开始到结尾的所有字符
+
+　　　　if(relUrl.indexOf("?") != -1){
+　　　　　　relUrl = relUrl.split("?")[0];
+　　　　}
+　　　　return relUrl;
+　　}
+//			document.write("<img src='http://qr.liantu.com/api.php?w=200&text="+window.location.host+GetUrlRelativePath()+window.location.search+"' />");
+//			alert(window.location.host+GetUrlRelativePath()+window.location.search);
+$("#img_qr").attr("src","http://qr.liantu.com/api.php?w=200&text="+window.location.host+GetUrlRelativePath()+window.location.search);
+
+		</script>
+</html>
