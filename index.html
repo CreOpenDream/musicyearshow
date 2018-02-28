@@ -2,12 +2,19 @@
 <html>
 	<head>
 		<meta charset="UTF-8">
+		<meta http-equiv="Content-Type">
+		<meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no">
+		
+		<meta content="text/html; charset=utf-8">
 		<title>2018数据易秀网音乐年度报告</title>
+	<link rel="stylesheet" href="css/animate.css" />
 	</head>
-	<body>
+<body>
 
-		<img src="#" id="img_qr" alt="这是二维码" />
+		<img src="#" id="img_qr"/>
 	</body>
+	
+	
 	<script type="text/javascript" src="js/jquery-2.1.0.js" ></script>
 	<script>
 //		
@@ -24,9 +31,10 @@
 　　　　}
 　　　　return relUrl;
 　　}
+
 //			document.write("<img src='http://qr.liantu.com/api.php?w=200&text="+window.location.host+GetUrlRelativePath()+window.location.search+"' />");
 //			alert(window.location.host+GetUrlRelativePath()+window.location.search);
 $("#img_qr").attr("src","http://qr.liantu.com/api.php?w=200&text="+window.location.host+GetUrlRelativePath()+window.location.search);
-
+$("#img_qr").addClass("animated bounce");
 		</script>
 </html>
